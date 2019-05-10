@@ -37,8 +37,8 @@
   "browser": {
     "crypto": false
   },
+
   "devDependencies": {
-    "@ungap/global-this": "^0.3.1",
     "blanket": "latest",
     "coveralls": "latest",
     "grunt": "latest",

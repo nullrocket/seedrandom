@@ -22,8 +22,20 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
 
-import globalThis from '@ungap/global-this';
-
+(function (Object) {
+  typeof globalThis !== 'object' && (
+    this ?
+      get() :
+      (Object.defineProperty(Object.prototype, '_T_', {
+        configurable: true,
+        get: get
+      }), _T_)
+  );
+  function get() {
+    this.globalThis = this;
+    delete Object.prototype._T_;
+  }
+}(Object));
 (function (pool, math) {
 //
 // The following constants are related to IEEE 754 limits.
