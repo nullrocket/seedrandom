@@ -22,7 +22,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
 
-var globalThis = require('@ungap/global-this');
+import globalThis from '@ungap/global-this';
 
 (function (pool, math) {
 //
